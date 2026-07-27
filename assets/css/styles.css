@@ -1,18 +1,20 @@
 :root {
-  --ink: #1c2421;
-  --ink-soft: #3d4a45;
-  --muted: #6b7872;
-  --paper: #f3f6f2;
-  --paper-2: #e7eee8;
-  --line: rgba(28, 36, 33, 0.1);
-  --brand: #0f6b5c;
-  --brand-deep: #0a4f44;
-  --accent: #d9784a;
-  --ok: #2f7d57;
-  --push: #0f6b5c;
-  --pull: #2b5f8a;
-  --legs: #8a5a2b;
-  --shadow: 0 10px 28px rgba(28, 36, 33, 0.08);
+  --ink: #e8eef8;
+  --ink-soft: #c5d0e6;
+  --muted: #8fa0c0;
+  --paper: #0b1d3a;
+  --card: rgba(255, 255, 255, 0.96);
+  --card-ink: #152238;
+  --card-muted: #5a6b86;
+  --line: rgba(255, 255, 255, 0.14);
+  --brand: #7eb6ff;
+  --brand-deep: #3d7dd6;
+  --accent: #f0e6a8;
+  --ok: #3d9b6e;
+  --push: #7eb6ff;
+  --pull: #a8c8ff;
+  --legs: #c9b6ff;
+  --shadow: 0 12px 32px rgba(4, 12, 28, 0.35);
   --radius: 18px;
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Manrope", system-ui, sans-serif;
@@ -34,9 +36,9 @@ body {
   font-family: var(--font-body);
   color: var(--ink);
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(15, 107, 92, 0.14), transparent 55%),
-    radial-gradient(900px 500px at 100% 0%, rgba(217, 120, 74, 0.12), transparent 50%),
-    linear-gradient(180deg, #f7faf7 0%, var(--paper) 40%, #eef3ef 100%);
+    radial-gradient(900px 500px at 15% -5%, rgba(90, 140, 220, 0.35), transparent 55%),
+    radial-gradient(700px 400px at 95% 10%, rgba(160, 120, 220, 0.2), transparent 50%),
+    linear-gradient(180deg, #0a1833 0%, #102448 45%, #0b1d3a 100%);
   line-height: 1.45;
 }
 
@@ -45,9 +47,9 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.35;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M0 60h120M60 0v120' stroke='%230f6b5c' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
   z-index: -1;
+  opacity: 0.9;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cpolygon fill='%23ffffff' fill-opacity='0.55' points='12,2 13.2,6.2 17.5,6.2 14,8.8 15.2,13 12,10.4 8.8,13 10,8.8 6.5,6.2 10.8,6.2'/%3E%3Cpolygon fill='%23ffffff' fill-opacity='0.35' points='72,40 72.8,42.6 75.5,42.6 73.3,44.2 74.1,46.8 72,45.2 69.9,46.8 70.7,44.2 68.5,42.6 71.2,42.6'/%3E%3Cpolygon fill='%23ffffff' fill-opacity='0.45' points='140,18 141,21.2 144.5,21.2 141.7,23.2 142.7,26.4 140,24.4 137.3,26.4 138.3,23.2 135.5,21.2 139,21.2'/%3E%3Cpolygon fill='%23ffffff' fill-opacity='0.3' points='48,110 48.7,112.2 51,112.2 49.2,113.6 49.9,115.8 48,114.4 46.1,115.8 46.8,113.6 45,112.2 47.3,112.2'/%3E%3Cpolygon fill='%23ffffff' fill-opacity='0.5' points='158,90 159.1,93.5 162.8,93.5 159.8,95.6 160.9,99.1 158,97 155.1,99.1 156.2,95.6 153.2,93.5 156.9,93.5'/%3E%3Cpolygon fill='%23ffffff' fill-opacity='0.25' points='100,150 100.6,151.8 102.5,151.8 101,153 101.6,154.8 100,153.6 98.4,154.8 99,153 97.5,151.8 99.4,151.8'/%3E%3C/svg%3E");
 }
 
 img {
@@ -76,7 +78,7 @@ input {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .brand {
@@ -85,6 +87,7 @@ input {
   font-size: clamp(1.7rem, 5vw, 2.2rem);
   letter-spacing: -0.02em;
   line-height: 1.1;
+  color: #fff;
 }
 
 .brand span {
@@ -94,7 +97,7 @@ input {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent);
   margin-bottom: 0.25rem;
 }
 
@@ -103,8 +106,8 @@ input {
   align-items: center;
   gap: 0.4rem;
   padding: 0.45rem 0.75rem;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px);
   border-radius: 999px;
   font-size: 0.82rem;
@@ -112,33 +115,54 @@ input {
   white-space: nowrap;
 }
 
+.love-note {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(126, 182, 255, 0.18), rgba(240, 230, 168, 0.12));
+  border: 1px solid rgba(240, 230, 168, 0.28);
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 3.5vw, 1.25rem);
+  font-style: italic;
+  color: #fff;
+  line-height: 1.35;
+  animation: rise 0.5s ease both;
+}
+
+.love-note::before {
+  content: "✦ ";
+  color: var(--accent);
+  font-style: normal;
+}
+
 .hero {
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
   animation: rise 0.55s ease both;
 }
 
 .hero h1 {
   margin: 0 0 0.5rem;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 7vw, 2.8rem);
+  font-size: clamp(1.85rem, 6.5vw, 2.6rem);
   font-weight: 650;
   letter-spacing: -0.03em;
-  line-height: 1.05;
+  line-height: 1.08;
+  color: #fff;
 }
 
 .hero p {
   margin: 0;
   color: var(--ink-soft);
   font-size: 1.02rem;
-  max-width: 34ch;
+  max-width: 36ch;
 }
 
 .suggest {
-  margin-top: 1.25rem;
+  margin-top: 1.1rem;
   padding: 1.1rem 1.15rem;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-deep) 100%);
-  color: #f4fffb;
+  background: linear-gradient(135deg, #3d7dd6 0%, #1e4f9a 100%);
+  color: #f4f8ff;
   box-shadow: var(--shadow);
   animation: rise 0.65s ease both;
 }
@@ -152,7 +176,7 @@ input {
 
 .suggest p {
   margin: 0 0 0.9rem;
-  color: rgba(244, 255, 251, 0.88);
+  color: rgba(244, 248, 255, 0.88);
   font-size: 0.95rem;
 }
 
@@ -166,7 +190,7 @@ input {
   border: 0;
   border-radius: 12px;
   background: #fff;
-  color: var(--brand-deep);
+  color: #1e4f9a;
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.15s ease, opacity 0.15s ease;
@@ -183,13 +207,13 @@ input {
 }
 
 .btn-dark {
-  background: var(--ink);
+  background: #152238;
   color: #fff;
 }
 
 .btn-accent {
   background: var(--accent);
-  color: #fff;
+  color: #1a2740;
 }
 
 .grid {
@@ -204,10 +228,11 @@ input {
   align-items: center;
   padding: 1.1rem 1.15rem;
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--card-ink);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow: var(--shadow);
-  transition: transform 0.18s ease, border-color 0.18s ease;
+  transition: transform 0.18s ease;
   animation: rise 0.55s ease both;
 }
 
@@ -219,25 +244,26 @@ input {
   transform: scale(0.99);
 }
 
-.day-card.push { border-left: 5px solid var(--push); }
-.day-card.pull { border-left: 5px solid var(--pull); }
-.day-card.legs { border-left: 5px solid var(--legs); }
+.day-card.push { border-left: 5px solid #3d7dd6; }
+.day-card.pull { border-left: 5px solid #6a8fd6; }
+.day-card.legs { border-left: 5px solid #8b74c7; }
 
 .day-card h2 {
   margin: 0;
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: 1.3rem;
+  color: var(--card-ink);
 }
 
 .day-card .meta {
   margin: 0.2rem 0 0;
-  color: var(--muted);
+  color: var(--card-muted);
   font-size: 0.9rem;
 }
 
 .day-card .arrow {
   font-size: 1.4rem;
-  color: var(--muted);
+  color: var(--card-muted);
 }
 
 .section-title {
@@ -245,14 +271,14 @@ input {
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent);
   font-weight: 700;
 }
 
 .notes {
   padding: 1rem 1.1rem;
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--line);
   color: var(--ink-soft);
   font-size: 0.95rem;
@@ -273,10 +299,8 @@ input {
   color: var(--muted);
 }
 
-.footer-note a {
-  color: var(--brand);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.footer-note code {
+  color: var(--accent);
 }
 
 /* Workout page */
@@ -300,6 +324,7 @@ input {
   font-family: var(--font-display);
   font-size: clamp(1.9rem, 6vw, 2.5rem);
   letter-spacing: -0.03em;
+  color: #fff;
 }
 
 .workout-head .focus {
@@ -311,7 +336,7 @@ input {
   margin-top: 1rem;
   height: 8px;
   border-radius: 999px;
-  background: rgba(28, 36, 33, 0.08);
+  background: rgba(255, 255, 255, 0.12);
   overflow: hidden;
 }
 
@@ -320,7 +345,7 @@ input {
   height: 100%;
   width: 0%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--brand), #2ea88f);
+  background: linear-gradient(90deg, #7eb6ff, #f0e6a8);
   transition: width 0.3s ease;
 }
 
@@ -334,8 +359,8 @@ input {
   margin: 0 0 1.1rem;
   padding: 0.9rem 1rem;
   border-radius: 14px;
-  background: rgba(15, 107, 92, 0.08);
-  border: 1px solid rgba(15, 107, 92, 0.15);
+  background: rgba(126, 182, 255, 0.12);
+  border: 1px solid rgba(126, 182, 255, 0.25);
   color: var(--ink-soft);
   font-size: 0.92rem;
 }
@@ -344,16 +369,17 @@ input {
   margin-bottom: 1rem;
   padding: 1rem;
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--card-ink);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: var(--shadow);
   animation: rise 0.5s ease both;
   transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .exercise.done {
-  border-color: rgba(47, 125, 87, 0.35);
-  background: rgba(47, 125, 87, 0.06);
+  border-color: rgba(61, 155, 110, 0.55);
+  background: #f2faf6;
 }
 
 .exercise-top {
@@ -368,11 +394,12 @@ input {
   font-size: 1.15rem;
   font-family: var(--font-display);
   letter-spacing: -0.02em;
+  color: var(--card-ink);
 }
 
 .exercise .stats {
   margin: 0.3rem 0 0;
-  color: var(--muted);
+  color: var(--card-muted);
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -381,8 +408,9 @@ input {
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  border: 2px solid rgba(28, 36, 33, 0.22);
+  border: 2px solid rgba(21, 34, 56, 0.22);
   background: #fff;
+  color: transparent;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -401,8 +429,8 @@ input {
   margin-top: 0.85rem;
   border-radius: 14px;
   overflow: hidden;
-  background: #dfe8e2;
-  aspect-ratio: 16 / 11;
+  background: #d7e0ef;
+  aspect-ratio: 4 / 3;
 }
 
 .exercise-media img {
@@ -414,7 +442,7 @@ input {
 .exercise .tip {
   margin: 0.75rem 0 0;
   font-size: 0.9rem;
-  color: var(--ink-soft);
+  color: var(--card-muted);
 }
 
 .sets {
@@ -429,9 +457,9 @@ input {
   min-height: 40px;
   padding: 0.4rem 0.65rem;
   border-radius: 10px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(21, 34, 56, 0.14);
   background: #fff;
-  color: var(--ink-soft);
+  color: var(--card-muted);
   font-weight: 700;
   font-size: 0.85rem;
   cursor: pointer;
@@ -453,7 +481,7 @@ input {
 
 .load-row label {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--card-muted);
   font-weight: 600;
 }
 
@@ -461,9 +489,10 @@ input {
   width: 5.5rem;
   min-height: 40px;
   border-radius: 10px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(21, 34, 56, 0.14);
   padding: 0.4rem 0.65rem;
   background: #fff;
+  color: var(--card-ink);
 }
 
 .rest-row {
@@ -477,7 +506,7 @@ input {
   margin: 1.25rem 0 0.75rem;
   min-height: 44px;
   border-radius: 12px;
-  border: 1px dashed rgba(28, 36, 33, 0.2);
+  border: 1px dashed rgba(255, 255, 255, 0.28);
   background: transparent;
   color: var(--muted);
   font-weight: 700;
@@ -494,7 +523,7 @@ input {
   right: 0;
   bottom: 0;
   padding: 0.75rem 0.75rem calc(0.75rem + env(safe-area-inset-bottom));
-  background: rgba(243, 246, 242, 0.92);
+  background: rgba(11, 29, 58, 0.92);
   backdrop-filter: blur(10px);
   border-top: 1px solid var(--line);
   display: flex;
@@ -510,7 +539,7 @@ input {
 .timer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(18, 28, 25, 0.55);
+  background: rgba(6, 14, 30, 0.65);
   display: grid;
   place-items: center;
   padding: 1rem;
@@ -527,6 +556,7 @@ input {
   padding: 1.5rem 1.25rem;
   border-radius: 22px;
   background: #fff;
+  color: var(--card-ink);
   text-align: center;
   box-shadow: var(--shadow);
   animation: rise 0.25s ease both;
@@ -544,7 +574,7 @@ input {
   font-size: 4rem;
   font-weight: 650;
   letter-spacing: -0.04em;
-  color: var(--brand-deep);
+  color: #1e4f9a;
   font-variant-numeric: tabular-nums;
 }
 
@@ -556,22 +586,25 @@ input {
 
 .done-banner {
   margin: 1rem 0;
-  padding: 1rem 1.1rem;
+  padding: 1.1rem 1.15rem;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, #2f7d57, #1f5e41);
-  color: #f3fff8;
+  background: linear-gradient(135deg, #3d7dd6, #1e4f9a);
+  color: #f4f8ff;
   animation: rise 0.35s ease both;
 }
 
 .done-banner h3 {
-  margin: 0 0 0.25rem;
+  margin: 0 0 0.35rem;
   font-family: var(--font-display);
   font-size: 1.3rem;
 }
 
 .done-banner p {
   margin: 0;
-  color: rgba(243, 255, 248, 0.9);
+  font-family: var(--font-display);
+  font-style: italic;
+  color: rgba(244, 248, 255, 0.95);
+  line-height: 1.35;
 }
 
 @keyframes rise {

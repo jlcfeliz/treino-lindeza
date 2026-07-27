@@ -27,7 +27,16 @@
   }
 
   function mediaUrl(name) {
-    return `media/${encodeURIComponent(name).replace(/%20/g, "%20")}`;
+    return "media/" + String(name).split("/").map(encodeURIComponent).join("/");
+  }
+
+  function pickPhrase() {
+    const list = window.PHRASES || [];
+    if (!list.length) return "";
+    const day = getTodayKey();
+    let hash = 0;
+    for (let i = 0; i < day.length; i++) hash = (hash + day.charCodeAt(i) * (i + 3)) % list.length;
+    return list[hash];
   }
 
   /* ---------- HOME ---------- */
@@ -36,6 +45,8 @@
     const suggested = suggestWorkout(state);
     const workout = window.WORKOUTS[suggested];
     const box = document.getElementById("suggest-box");
+    const love = document.getElementById("love-note");
+    if (love) love.textContent = pickPhrase();
     if (!box || !workout) return;
 
     const lastText = state.lastCompleted
@@ -157,7 +168,7 @@
         <button type="button" class="check" aria-checked="${!!session.done[ex.id]}" aria-label="Marcar exercício como feito"></button>
       </div>
       <div class="exercise-media">
-        <img src="${mediaUrl(ex.gif)}" alt="${ex.name}" loading="${index < 2 ? "eager" : "lazy"}">
+        <img src="${mediaUrl(ex.photo || ex.gif)}" alt="${ex.name}" loading="${index < 2 ? "eager" : "lazy"}">
       </div>
       <p class="tip">${ex.tip}</p>
       <div class="sets" data-sets></div>
@@ -233,8 +244,8 @@
     }
     slot.innerHTML = `
       <div class="done-banner">
-        <h3>Treino concluído</h3>
-        <p>Mandou bem. Pode marcar como feito e voltar no próximo dia da rotação.</p>
+        <h3>Treino concluído ✨</h3>
+        <p>${pickPhrase()}</p>
       </div>
     `;
   }
