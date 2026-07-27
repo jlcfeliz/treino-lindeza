@@ -3,10 +3,10 @@ window.WORKOUTS = {
     id: "a",
     title: "Treino A",
     subtitle: "Empurrar",
-    focus: "Peito · Ombro · Tríceps",
+    focus: "Peito · Ombro lateral · Tríceps",
     duration: "35–45 min",
     color: "push",
-    tip: "Carga confortável: no fim da série ainda dá pra fazer 2 ou 3 reps. Sem dor nas articulações.",
+    tip: "Foco em postura: ombros longe das orelhas, peito aberto. Carga confortável — tensão muscular ok, dor em pontada não.",
     exercises: [
       {
         id: "a1",
@@ -15,7 +15,7 @@ window.WORKOUTS = {
         reps: "10–12",
         rest: 90,
         gif: "Supino reto.gif",
-        tip: "Pés no chão, ombros para trás. Desça controlando e suba sem travar o cotovelo.",
+        tip: "Escápulas encaixadas no banco (ombros para trás e para baixo). Desça sem abrir demais o cotovelo.",
       },
       {
         id: "a2",
@@ -24,16 +24,16 @@ window.WORKOUTS = {
         reps: "12",
         rest: 75,
         gif: "Pack deck.gif",
-        tip: "Aperte o peito no meio do movimento. Não force além do confortável nos ombros.",
+        tip: "Amplitude confortável. Ajuda a equilibrar o peito sem sobrecarregar a frente do ombro.",
       },
       {
         id: "a3",
         name: "Elevação lateral",
         sets: 3,
-        reps: "12",
+        reps: "12–15",
         rest: 60,
         gif: "elevação lateral.gif",
-        tip: "Cotovelos levemente flexionados. Sobe até a altura do ombro, sem balançar o corpo.",
+        tip: "Carga leve. Sobe só até a linha do ombro, sem encolher o trapézio. Controle a descida.",
       },
       {
         id: "a4",
@@ -53,18 +53,18 @@ window.WORKOUTS = {
         reps: "12",
         rest: 60,
         gif: "Crucifixo com halteres.gif",
-        tip: "Opcional se sobrar energia. Amplitude confortável — não force o ombro.",
+        tip: "Opcional. Amplitude curta se sentir tensão na frente do ombro.",
       },
     ],
   },
   b: {
     id: "b",
     title: "Treino B",
-    subtitle: "Puxar",
-    focus: "Costas · Bíceps · Posterior de ombro",
+    subtitle: "Postura & puxar",
+    focus: "Costas · Posterior de ombro · Bíceps",
     duration: "35–45 min",
     color: "pull",
-    tip: "Puxe com as costas, não só com o braço. Imagine “encaixar” o ombro para trás a cada rep.",
+    tip: "Este é o treino mais importante pra tensão e postura. Priorize qualidade: peito aberto, ombros para trás a cada rep.",
     exercises: [
       {
         id: "b1",
@@ -73,7 +73,7 @@ window.WORKOUTS = {
         reps: "10–12",
         rest: 90,
         gif: "Pulley frente.gif",
-        tip: "Peito aberto, desça a barra até perto do peito sem balançar o tronco.",
+        tip: "Puxe com as costas. Imagine colocar os ombros no bolso de trás da calça — sem balançar o tronco.",
       },
       {
         id: "b2",
@@ -82,16 +82,16 @@ window.WORKOUTS = {
         reps: "10–12 cada lado",
         rest: 75,
         gif: "remada unilateral.gif",
-        tip: "Costas estáveis. Cotovelo passa perto do corpo e aperta a escápula no topo.",
+        tip: "Tronco estável. No topo, aperte a escápula (ombro para trás). Isso fortalece a musculatura da postura.",
       },
       {
         id: "b3",
         name: "Posterior de ombro",
         sets: 3,
-        reps: "12",
+        reps: "12–15",
         rest: 60,
         gif: "Posterior de ombro.gif",
-        tip: "Movimento curto e controlado. Ajuda postura e ombros saudáveis.",
+        tip: "Exercício-chave pra ombro e postura. Movimento curto, sem usar o trapézio. Sinta a parte de trás do ombro.",
       },
       {
         id: "b4",
@@ -100,7 +100,7 @@ window.WORKOUTS = {
         reps: "12",
         rest: 60,
         gif: "Rosca direta na polia baixa.gif",
-        tip: "Cotovelos fixos ao lado do corpo. Subida e descida sem balanço.",
+        tip: "Cotovelos fixos. Ombros relaxados (longe das orelhas) o tempo todo.",
       },
     ],
     extras: [
@@ -118,11 +118,11 @@ window.WORKOUTS = {
   c: {
     id: "c",
     title: "Treino C",
-    subtitle: "Pernas",
-    focus: "Quadríceps · Glúteo · Posterior",
+    subtitle: "Pernas + postura",
+    focus: "Pernas · Posterior de ombro leve",
     duration: "35–45 min",
     color: "legs",
-    tip: "Comece com carga leve na 1ª série. No afundo, use o apoio se precisar — qualidade > peso.",
+    tip: "Pernas com tronco ereto. No fim, um exercício leve de posterior de ombro pra reforçar a postura no dia.",
     exercises: [
       {
         id: "c1",
@@ -140,7 +140,7 @@ window.WORKOUTS = {
         reps: "8–10 cada perna",
         rest: 75,
         gif: "afundo.gif",
-        tip: "No GIF não tem peso — use os pesinhos. Joelho da frente acompanha o pé, tronco ereto.",
+        tip: "No GIF não tem peso — use os pesinhos. Joelho da frente acompanha o pé, peito aberto, tronco ereto.",
       },
       {
         id: "c3",
@@ -160,19 +160,29 @@ window.WORKOUTS = {
         gif: "cadeira extensora.gif",
         tip: "Na mesma máquina (ajuste conforme o aparelho do prédio). Contraia o posterior da coxa sem arquear a lombar.",
       },
+      {
+        id: "c5",
+        name: "Posterior de ombro (leve)",
+        sets: 2,
+        reps: "15",
+        rest: 45,
+        gif: "Posterior de ombro.gif",
+        tip: "Série leve só pra postura. Sem encolher os ombros. Se estiver cansada, faça 1 série.",
+      },
     ],
     extras: [
       {
-        id: "c5",
+        id: "c6",
         name: "Elevação frontal",
         sets: 2,
         reps: "12",
         rest: 60,
         gif: "elevação frontal.gif",
-        tip: "Opcional se quiser um pouco de ombro no dia de perna. Carga leve.",
+        tip: "Opcional e carga bem leve. Se sentir tensão na frente do ombro, pule.",
       },
     ],
   },
 };
 
-window.ROTATION = ["a", "b", "c"];
+// B aparece com mais frequência: fortalece costas/ombros (postura e tensão)
+window.ROTATION = ["a", "b", "c", "b"];
