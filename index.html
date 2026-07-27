@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f6b5c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Treino da Lindeza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="home">
+  <main class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <span>Academia do prédio</span>
+        Treino da Lindeza
+      </div>
+      <div class="chip">versão nova</div>
+    </header>
+
+    <section class="hero">
+      <h1>Volta com calma, progresso de verdade.</h1>
+      <p>Treinos mais enxutos, com séries, descanso e lembrete do que fazer hoje.</p>
+    </section>
+
+    <section class="suggest" id="suggest-box" aria-live="polite">
+      <strong>Carregando sugestão…</strong>
+    </section>
+
+    <p class="section-title">Escolher treino</p>
+    <div class="grid">
+      <a class="day-card push" href="treino.html?dia=a">
+        <div>
+          <h2>Treino A · Empurrar</h2>
+          <p class="meta">Peito · Ombro · Tríceps · <span data-last="a">4 exercícios</span></p>
+        </div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="day-card pull" href="treino.html?dia=b">
+        <div>
+          <h2>Treino B · Puxar</h2>
+          <p class="meta">Costas · Bíceps · Posterior · <span data-last="b">4 exercícios</span></p>
+        </div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="day-card legs" href="treino.html?dia=c">
+        <div>
+          <h2>Treino C · Pernas</h2>
+          <p class="meta">Leg press · Afundo · Extensora/Flexora · <span data-last="c">4 exercícios</span></p>
+        </div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <p class="section-title">Como usar na volta</p>
+    <div class="notes">
+      <ul>
+        <li>2 a 3 dias por semana já é ótimo no começo.</li>
+        <li>Ordem sugerida: A → B → C → A…</li>
+        <li>Carga leve/média: no fim da série ainda sobram 2–3 reps.</li>
+        <li>5 minutos de aquecimento antes do primeiro exercício.</li>
+      </ul>
+    </div>
+
+    <p class="footer-note">
+      A versão antiga continua em
+      <a href="../treino-main/treino_a.html">treino-main</a>
+      (A / B / C como ela já conhece).
+      Depois, se quiser, fotos dos aparelhos do prédio entram aqui no lugar dos GIFs genéricos.
+    </p>
+  </main>
+
+  <script src="assets/js/workouts.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

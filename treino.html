@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0f6b5c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Treino · Treino da Lindeza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="workout">
+  <main class="wrap" id="workout-root">
+    <p>Carregando treino…</p>
+  </main>
+
+  <div class="sticky-bar" id="sticky-bar"></div>
+
+  <div class="timer-overlay" id="timer-overlay" hidden>
+    <div class="timer-card" role="dialog" aria-labelledby="timer-title">
+      <h3 id="timer-title">Descanso</h3>
+      <div class="timer-digits" id="timer-digits">1:30</div>
+      <div class="timer-actions">
+        <button type="button" class="btn btn-dark" id="timer-skip">Pular</button>
+        <button type="button" class="btn btn-ghost" id="timer-close" style="border-color:var(--line);color:var(--ink-soft)">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/workouts.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
