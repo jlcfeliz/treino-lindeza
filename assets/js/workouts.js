@@ -23,8 +23,8 @@ window.WORKOUTS = {
         sets: 3,
         reps: "10–12",
         rest: 90,
-        photo: "aparelhos/peito-remada-maquina.jpg",
-        tip: "Na parte de trás da multiestação (não é o pack deck da frente). Escápulas para trás, peito aberto. Empurre sem travar o cotovelo.",
+        gif: "Supino reto.gif",
+        tip: "Na parte de trás da multiestação (não é o pack deck da frente). Escápulas para trás, peito aberto.",
       },
       {
         id: "a2",
@@ -32,8 +32,8 @@ window.WORKOUTS = {
         sets: 3,
         reps: "12–15",
         rest: 60,
-        photo: "aparelhos/pesos-halteres.jpg",
-        tip: "Halteres leves do rack. Sobe só até a linha do ombro, sem encolher o trapézio.",
+        gif: "elevação lateral.gif",
+        tip: "Halteres leves. Sobe só até a linha do ombro, sem encolher o trapézio.",
       },
       {
         id: "a3",
@@ -41,8 +41,8 @@ window.WORKOUTS = {
         sets: 3,
         reps: "12",
         rest: 60,
-        photo: "aparelhos/smith-polia.jpg",
-        tip: "Na polia da Smith/funcional. Cotovelos colados ao corpo.",
+        gif: "Triceps cross barra reta.gif",
+        tip: "Na polia. Cotovelos colados ao corpo.",
       },
       {
         id: "a4",
@@ -50,7 +50,7 @@ window.WORKOUTS = {
         sets: 2,
         reps: "12",
         rest: 60,
-        photo: "aparelhos/multiestacao.jpg",
+        gif: "Pack deck.gif",
         tip: "Na frente da multiestação (braços com almofada). Amplitude confortável nos ombros.",
       },
     ],
@@ -71,7 +71,7 @@ window.WORKOUTS = {
         sets: 3,
         reps: "10–12",
         rest: 90,
-        photo: "aparelhos/puxada-maquina.jpg",
+        gif: "Pulley frente.gif",
         tip: "Puxe com as costas. Imagine colocar os ombros no bolso de trás — sem balançar.",
       },
       {
@@ -80,7 +80,7 @@ window.WORKOUTS = {
         sets: 3,
         reps: "10–12",
         rest: 75,
-        photo: "aparelhos/peito-remada-maquina.jpg",
+        gif: "remada unilateral.gif",
         tip: "Mesma máquina do peito: sente do outro lado (parte de trás). Dá pra puxar com um braço de cada vez. No topo, aperte a escápula.",
       },
       {
@@ -89,8 +89,8 @@ window.WORKOUTS = {
         sets: 3,
         reps: "12–15",
         rest: 60,
-        photo: "aparelhos/acessorios-polia.jpg",
-        tip: "Use a corda da caixa de acessórios na polia alta. Puxe em direção ao rosto, cotovelos altos. Exercício-chave pro ombro.",
+        gif: "Posterior de ombro.gif",
+        tip: "Na polia alta com a corda. Puxe em direção ao rosto, cotovelos altos. Exercício-chave pro ombro.",
       },
       {
         id: "b4",
@@ -111,7 +111,7 @@ window.WORKOUTS = {
     focus: "Os que você gostou — volume menor",
     duration: "30–40 min",
     color: "legs",
-    tip: "Volume menor de propósito (depois da dorzinha de quinta/sexta). 4 exercícios bastam. Qualidade > quantidade.",
+    tip: "Volume menor de propósito. 4 exercícios bastam. Qualidade > quantidade.",
     exercises: [
       {
         id: "c1",
@@ -119,8 +119,8 @@ window.WORKOUTS = {
         sets: 3,
         reps: "10–12",
         rest: 90,
-        photo: "aparelhos/pesos-halteres.jpg",
-        tip: "Com halter ou anilha no quadril (pesos do rack). Costas no colchonete/banco, empurre o calcanhar e aperte o glúteo no topo.",
+        gif: "elevacao-pelvica.gif",
+        tip: "Com halter ou anilha no quadril. Empurre o calcanhar e aperte o glúteo no topo.",
       },
       {
         id: "c2",
@@ -128,7 +128,7 @@ window.WORKOUTS = {
         sets: 3,
         reps: "12–15",
         rest: 60,
-        photo: "aparelhos/cadeira-abdutora.jpg",
+        gif: "cadeira-abdutora.gif",
         tip: "Abra as pernas com controle. Não use carga máxima — sinta o glúteo do lado de fora.",
       },
       {
@@ -137,8 +137,8 @@ window.WORKOUTS = {
         sets: 2,
         reps: "12 cada lado",
         rest: 60,
-        photo: "aparelhos/acessorios-polia.jpg",
-        tip: "Tornozeleira da caixinha + polia baixa. Empurre pra trás sem arquear a lombar. Só 2 séries mesmo.",
+        gif: "gluteo-polia.gif",
+        tip: "Tornozeleira + polia baixa. Empurre pra trás sem arquear a lombar. Só 2 séries.",
       },
       {
         id: "c4",
@@ -146,8 +146,8 @@ window.WORKOUTS = {
         sets: 2,
         reps: "10",
         rest: 75,
-        photo: "aparelhos/pesos-halteres.jpg",
-        tip: "Pés abertos, pontas pra fora, um halter na frente. Desça com peito aberto. Só 2 séries pra não sobrecarregar.",
+        gif: "agachamento-sumo.gif",
+        tip: "Pés abertos, pontas pra fora, um halter na frente. Desça com peito aberto. Só 2 séries.",
       },
     ],
     extras: [
@@ -157,7 +157,7 @@ window.WORKOUTS = {
         sets: 2,
         reps: "8 cada perna",
         rest: 75,
-        photo: "aparelhos/pesos-halteres.jpg",
+        gif: "afundo-bulgaro.gif",
         tip: "Só se sobrar energia. Pé de trás no banco. Carga leve.",
       },
       {
@@ -166,7 +166,7 @@ window.WORKOUTS = {
         sets: 2,
         reps: "12 cada lado",
         rest: 45,
-        photo: "aparelhos/acessorios-polia.jpg",
+        gif: "gluteo-quatro-apoios.gif",
         tip: "No colchonete. Joelho no chão, eleva a perna sem girar a cintura.",
       },
       {
@@ -175,7 +175,7 @@ window.WORKOUTS = {
         sets: 2,
         reps: "12 cada lado",
         rest: 60,
-        photo: "aparelhos/smith-polia.jpg",
+        gif: "abducao-polia.gif",
         tip: "Alternativa à cadeira. Tornozeleira + polia baixa, abre a perna pro lado.",
       },
     ],
