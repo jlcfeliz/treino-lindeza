@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0f6b5c">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Treino">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <title>Treino da Lindeza</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
@@ -66,15 +70,27 @@
       </ul>
     </div>
 
+    <p class="section-title">No iPhone</p>
+    <div class="notes">
+      <ul>
+        <li>Abra pelo Safari (não pelo Instagram/WhatsApp interno).</li>
+        <li>Toque em Compartilhar → <strong>Adicionar à Tela de Início</strong>.</li>
+        <li>Pronto: ícone “Treino” como um app.</li>
+      </ul>
+    </div>
+
     <p class="footer-note">
-      A versão antiga continua em
-      <a href="../treino-main/treino_a.html">treino-main</a>
-      (A / B / C como ela já conhece).
-      Depois, se quiser, fotos dos aparelhos do prédio entram aqui no lugar dos GIFs genéricos.
+      Caminho certo no Mac: <code>Projects/treino-lindeza/index.html</code>
+      (sem repetir a pasta). A versão antiga continua em treino-main.
     </p>
   </main>
 
   <script src="assets/js/workouts.js"></script>
   <script src="assets/js/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js").catch(function () {});
+    }
+  </script>
 </body>
 </html>
